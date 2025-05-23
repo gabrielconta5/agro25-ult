@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth; /* Adiciona o efeito de rolagem suave */
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #2a9d8f;
+  padding: 20px 0;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Navegação - Botões de navegação para as seções (Sobre, Projeto, Contato) */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li label {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 25px;  /* Tamanho maior e confortável para clique */
+  border-radius: 30px;  /* Bordas arredondadas */
+  background-color: #264653;  /* Cor de fundo dos botões */
+  text-align: center;
+  display: inline-block;
+  border: 2px solid transparent;  /* Borda inicial invisível */
+}
+
+nav ul li label:hover {
+  background-color: #e9f5f0;  /* Cor de fundo ao passar o mouse */
+  color: #264653;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Sombra ao passar o mouse */
+  border-color: #2a9d8f;  /* Borda visível ao passar o mouse */
+}
+
+/* Seções */
+section {
+  display: none; /* Esconde todas as seções inicialmente */
+  padding: 60px 0;
+  background-color: white;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2a9d8f;
+}
+
+section p, section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Lista de objetivos */
+ul {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+ul li {
+  background-color: #e9f5f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contato */
+#contato a {
+  color: #2a9d8f;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Exibir seção quando o radio button for selecionado */
+input[type="radio"]:checked + section {
+  display: block;
+}
+
+/* Estilizando as imagens */
+.section-img {
+  width: 100%;
+  max-width: 600px; /* Limita a largura máxima da imagem */
+  display: block;
+  margin: 20px auto; /* Centraliza a imagem */
+  border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  nav ul {
+      flex-direction: column;
+      padding: 10px 0;
+  }
+
+  section {
+      padding: 40px 0;
+  }
+
+  nav ul li label {
+      font-size: 1rem;
+  }
+}
